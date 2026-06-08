@@ -1,0 +1,15 @@
+torch
+transformers
+datasets
+scikit-learn
+pandas
+seaborn
+matplotlib
+nltk
+accelerate
+fastapi
+uvicorn[standard]
+pydantic
+beautifulsoup4
+python-dotenv
+requests

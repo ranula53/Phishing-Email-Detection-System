@@ -1,0 +1,63 @@
+# ── Secrets ──────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ── Virtual environments ──────────────────────────────────────
+new-venv/
+venv/
+.venv/
+env/
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+notebooks/
+
+# ── Node ─────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# ── Training data ─────────────────────────────────────────────
+data/*.csv
+data/*.db
+data/*.sqlite
+
+# ── Databases & caches ────────────────────────────────────────
+*.db
+*.sqlite
+
+# ── Trained models (weights + config — do not commit) ─────────
+models/
+
+# ── Training checkpoints (very large — optimizer/scheduler states) ──
+results/
+*.pt
+*.pth
+
+# ── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+
+# ── IDE / tools ───────────────────────────────────────────────
+.idea/
+.vscode/
+.claude/
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini

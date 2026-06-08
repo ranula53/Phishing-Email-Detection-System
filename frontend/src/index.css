@@ -1,0 +1,133 @@
+/* ── Design Tokens ─────────────────────────────────────────── */
+:root {
+  /* Typography */
+  --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Fira Code', Consolas, monospace;
+
+  /* Border Radius */
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 14px;
+  --border-radius-xl: 20px;
+
+  /* Light mode (default) */
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #6b7280;
+  --color-text-danger: #dc2626;
+  --color-text-success: #16a34a;
+  --color-text-info: #2563eb;
+
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f3f4f6;
+  --color-background-danger: rgba(220, 38, 38, 0.06);
+  --color-background-success: rgba(22, 163, 74, 0.06);
+
+  --color-border-primary: #d1d5db;
+  --color-border-secondary: #e5e7eb;
+  --color-border-tertiary: #f0f0f0;
+  --color-border-danger: #fca5a5;
+  --color-border-success: #86efac;
+
+  color-scheme: light dark;
+}
+
+/* ── Dark Mode ────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #f0f0f5;
+    --color-text-secondary: #9ca3af;
+    --color-text-danger: #f87171;
+    --color-text-success: #4ade80;
+    --color-text-info: #60a5fa;
+
+    --color-background-primary: #1a1a2e;
+    --color-background-secondary: #22223a;
+    --color-background-danger: rgba(248, 113, 113, 0.08);
+    --color-background-success: rgba(74, 222, 128, 0.08);
+
+    --color-border-primary: #3b3b5c;
+    --color-border-secondary: #2e2e4a;
+    --color-border-tertiary: #252540;
+    --color-border-danger: rgba(248, 113, 113, 0.35);
+    --color-border-success: rgba(74, 222, 128, 0.35);
+  }
+}
+
+/* ── Base Reset & Globals ─────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background: var(--color-background-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+a {
+  color: var(--color-text-info);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Form Elements ────────────────────────────────────────── */
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  font-family: var(--font-sans);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--color-text-info) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+button {
+  font-family: var(--font-sans);
+  transition: background 0.2s ease, opacity 0.2s ease, transform 0.1s ease;
+}
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+button:hover:not(:disabled) {
+  background: var(--color-background-secondary) !important;
+}
+
+/* ── Scrollbar (Webkit) ───────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-primary);
+  border-radius: 3px;
+}
